@@ -1,12 +1,8 @@
-body {
-  background-color: #ffffcc;
-}
-
 .mood-board-heading {
   text-align: center;
   font-size: 2.5em;
   color: #333;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .mood-board {
@@ -41,4 +37,144 @@ body {
 .mood-board-text {
   margin-top: 20px;
   font-size: 1.2em;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+.footer p {
+  color: #6b7280;
+  margin-top: 20px;
+}
+
+.footer-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --light-grey: #e1e0e0;
+  --dark-purple: #7c0e7c;
+  --black: #000;
+}
+
+body {
+  background-color: var(--light-grey);
+}
+
+.navbar {
+    opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--white);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul li {
+  list-style: none;
+  border-radius: 4px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.navbar ul .nav-item a:hover {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+button:hover {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+.navbar ul .nav-item .sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 5%;
+  transition: opacity 0.5s ease;
+  display: block;
+  background-color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .navbar ul .nav-item .sub-menu {
+    right: 15%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar ul .nav-item .sub-menu {
+    right: 13%;
+  }
+}
+
+.navbar ul .nav-item:hover .sub-menu,
+.navbar ul .nav-item:focus-within .sub-menu {
+  visibility: visible;
+  opacity: 1;
 }

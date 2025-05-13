@@ -7,9 +7,79 @@ function MoodBoardItem({ color, image, description }) {
   );
 }
 
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <ul>
+        <li className="nav-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li className="nav-item">
+          <a href="#">Widgets</a>
+        </li>
+        <li className="nav-item">
+          <button aria-expanded="false">Apps</button>
+          <ul className="sub-menu" aria-label="Apps">
+            <li>
+              <a href="#">Calendar</a>
+            </li>
+            <li>
+              <a href="#">Chat</a>
+            </li>
+            <li>
+              <a href="#">Email</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer class="footer">
+      <div class="footer-section">
+        <ul>
+          <li>
+            <a href="#">Fitness Dashboard</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Watch Videos</a>
+          </li>
+          <li>
+            <a href="#">Discord</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Terms &amp; Conditions</a>
+          </li>
+        </ul>
+      </div>
+      <p>© 2024 Fitness Dashboard. All Rights Reserved.</p>
+      <div class="footer-icons">
+        <a href="#">🎮</a>
+        <a href="#">🐦</a>
+        <a href="#">💻</a>
+        <a href="#">🏀</a>
+      </div>
+    </footer>
+  );
+};
+
 function MoodBoard() {
   return (
     <div>
+      <Navbar />
       <h1 className="mood-board-heading">Destination Mood Board</h1>
       <div className="mood-board">
         <MoodBoardItem
@@ -43,6 +113,7 @@ function MoodBoard() {
           description="Istanbul"
         />
       </div>
+      <Footer />
     </div>
   );
 }
